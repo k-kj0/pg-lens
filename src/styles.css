@@ -43,3 +43,9 @@ body { margin: 0; background: var(--bg); color: var(--text); font-family: system
 .footer { margin-top: 8px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+/* Contrast fixes for click-ui light-theme colours that fall below 4.5:1 on the card surface.
+   Unlayered rules beat click-ui's @layer clickui tokens. */
+[data-cui-theme='light'] {
+  --click-badge-opaque-color-text-success: #006b0d;
+  --click-button-basic-color-empty-text-default: #1f4fb5;
+}
