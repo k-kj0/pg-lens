@@ -42,6 +42,7 @@ export default function App() {
   }, [theme]);
 
   const summary = useMemo(() => (items ? summarize(items) : null), [items]);
+  const slices = useMemo(() => (items ? timeByVerdict(items) : []), [items]);
   const visible = useMemo(() => {
     if (!items) return [];
     const list = filter === 'all' ? items : items.filter((a) => a.verdict === filter);
@@ -134,7 +135,8 @@ export default function App() {
                 <p className="note">
                   {summary.queryCount} queries analysed: {summary.offloadCount} offload candidates, {summary.watchCount} to
                   watch, {summary.keepCount} to keep on Postgres. Total execution time {fmtMs(summary.totalTimeMs)}.
-                </p>
+                               </p>
+                <TimeShareChart slices={slices} />
               </>
             ) : (
               <p className="note">No results yet. Paste an export and press Analyze, or load the sample data.</p>
