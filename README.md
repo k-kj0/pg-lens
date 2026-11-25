@@ -6,7 +6,7 @@ Paste a `pg_stat_statements` export and see which Postgres queries **look analyt
 - Scores each query from its text and I/O counters (a heuristic, see limits below).
 - React, TypeScript, Vite, [`@clickhouse/click-ui`](https://www.npmjs.com/package/@clickhouse/click-ui). Light and dark themes.
 
-> Live demo: _add your Vercel URL here_ &nbsp;|&nbsp; Screenshot: _add a GIF of "Load sample data" here_
+> Live demo:[ https://pr-lens-pi.vercel.app/ ] &nbsp;|&nbsp; Screenshot: _add a GIF of "Load sample data" here_
 
 ## Use it
 
