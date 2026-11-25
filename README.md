@@ -37,7 +37,9 @@ Points are added for aggregates, GROUP BY, window functions, `date_trunc`, `coun
 This is a heuristic. It cannot see your schema, indexes or data. Treat an offload verdict as a reason to run `EXPLAIN` and a trial, not as proof. See `docs/DESIGN.md` for decisions and trade-offs.
 
 ## Status of checks
-
+pg-lens | React, TypeScript, Vite, @clickhouse/click-ui design system, Vitest, PostgreSQL | live demo | github.com/k-kj0/pg-lens
+• Built a React and TypeScript Postgres diagnostics UI on ClickHouse's open-source click-ui design system. It reads a pg_stat_statements export, scores each query, and labels it Offload candidate, Watch or Keep on Postgres, showing the share of total query time that looks analytical; light and dark themes.
+• Wrote 23 Vitest tests (query scoring, CSV and JSON parsing, automated axe accessibility checks), a design document and CI workflows; deployed on Vercel.
 - Unit tests, type check and production build pass locally.
 - The Playwright accessibility run (which includes colour contrast) is defined in `.github/workflows/a11y.yml`. Check its first CI result and fix anything it reports; do not weaken the test.
 - `scripts/export.sql` has not been run against a live database yet.
