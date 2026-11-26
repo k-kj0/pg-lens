@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Badge, Button, ClickUIProvider, Text, Title } from '@clickhouse/click-ui';
 import { analyzeAll, sortItems, summarize, type SortKey } from './lib/analyze';
 import TimeShareChart from './components/TimeShareChart';
+import { fmtInt, fmtMB, fmtMs, fmtPct } from './lib/format';
 import { timeByVerdict } from './lib/chartData';
 import { parseInput } from './lib/parse';
 import { SAMPLE_ROWS } from './lib/sample';

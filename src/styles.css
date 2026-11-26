@@ -49,3 +49,15 @@ body { margin: 0; background: var(--bg); color: var(--text); font-family: system
   --click-badge-opaque-color-text-success: #006b0d;
   --click-button-basic-color-empty-text-default: #1f4fb5;
 }
+
+/* Chart: time share by verdict. Fills differ by pattern, not only colour; edges use the text colour. */
+.chart { margin: 12px 0 4px; }
+.chart-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+.chart-svg { width: 100%; height: 44px; display: block; }
+.chart-fill-offload { fill: #c0392b; }
+:root[data-theme='dark'] .chart-fill-offload { fill: #e8574a; }
+.chart-fill-watch { fill: #f2c94c; }
+.chart-fill-keep { fill: #cfe3d4; }
+.chart-hatch { fill: #1c1c1c; }
+.chart-legend { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 4px; font-size: 0.9rem; }
+.chart-legend li { display: flex; align-items: center; gap: 8px; }
